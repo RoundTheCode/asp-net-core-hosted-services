@@ -1,8 +1,9 @@
+using RoundTheCode.HostedServiceExample.HostedServices;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHostedService<MyBackgroundService>();
-builder.Services.AddHostedService<IHostedService>();
-
+builder.Services.AddHostedService<MyHostedService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
