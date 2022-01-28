@@ -1,5 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHostedService<MyBackgroundService>();
+builder.Services.AddHostedService<IHostedService>();
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
